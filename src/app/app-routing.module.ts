@@ -1,0 +1,32 @@
+import { ListUserComponent } from './list-user-component/list-user-component.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { MainProviderComponent } from './main-provider/main-provider.component';
+import { MainProductComponent } from './main-product/main-product.component';
+import { MainUserComponent } from './main-user/main-user.component';
+import { NgModule, Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'mainuser',
+    component: MainUserComponent,
+    children: [{ path: 'listuser/:cat', component: ListUserComponent }],
+    // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
+  },
+  { path: 'mainproduct', component: MainProductComponent },
+  { path: 'mainprovider', component: MainProviderComponent },
+
+  { path: '**', component: NotFoundPageComponent },
+];
+// yemchi 9ad 9ad lien
+//prefix to learn
+// lezem ** le5era 5ater yemchi bil ordre w gadina '' 5ater bech yechargi notfound ken gedouch redirect
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}

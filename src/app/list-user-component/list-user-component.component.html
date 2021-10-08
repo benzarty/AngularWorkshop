@@ -1,0 +1,99 @@
+<!--
+<table>
+   directive 
+  <tr *ngFor="let u of list" [style.backgroundColor]="u.accountCategory == 'Admin' ? 'red' : 'green' ">
+    <!-- list hiya nom proprioté mawjouda fil ts
+    <td>
+      {{ u.firstName }}
+    </td>
+    <td>
+      {{ u.lastName }}
+    </td>
+    <td>
+      {{ u.birthDate }}
+    </td>
+    <td>
+      {{ u.accountCategory }}
+    </td>
+    <td>
+      {{ u.email }}
+    </td>
+    <td>
+      {{ u.password }}
+    </td>
+   
+    <td>
+      {{ u.profession }}
+    </td>
+    <td>
+        <img [src]="u.picture" >
+      </td>
+      <!-- teraja3 true or false  
+    <td><button [disabled]="u.accountCategory == 'Admin' ">Delete</button></td>
+    <td><button [disabled]="getUserCategory(u.accountCategory)">Delete</button></td>  <!-- mezeù retour boolean-
+    <td><button *ngIf="u.accountCategory == 'Admin' ">Delete</button></td>
+    <td><button [hidden]="u.accountCategory == 'Admin' ">Delete</button></td>
+
+
+
+  </tr>
+</table>   -->
+ <!-- bech te5dem biha lezem importi modul   ngModel -->
+  <!-- tenajamch zouz ng fard balise  -->
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="main-box clearfix">
+                  <div class="table-responsive">
+                      Search: <input [(ngModel)]="search">
+                      <table class="table user-list">
+                          <thead>
+                              <tr>
+                                  <th><span>User</span></th>
+                                  <th><span>Created</span></th>
+                                  <th class="text-center"><span>Status</span></th>
+                                  <th><span>Email</span></th>
+                                  <th>&nbsp;</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <div *ngFor="let u of list; let i = index; let f=first">
+                                
+                              <tr [style.font-size.px]="u.accountCategory == 'Admin' ? '20' : '30'" [style.background-color]="u.accountCategory == 'Admin' ? 'red' : 'green'"  *ngIf="search == '' || u.accountCategory == search">
+                                  
+                                  <td>
+                                      <img [src]="u.picture" alt="">
+                                      <a href="#" class="user-link">{{u.firstName}} {{u.lastName}}</a>
+                                      <span class="user-subhead">{{u.accountCategory}}</span>
+                                  </td>
+                                  <td>
+                                      {{ u.birthDate }}
+                                  </td>
+                                  <td class="text-center">
+                                      <span class="label label-default">Inactive</span>
+                                  </td>
+                                  <td>
+                                      <a href="#">{{ u.email }}</a>
+                                  </td>
+                                  <td style="width: 20%;">
+                                      <button class="btn-danger" [disabled]="u.accountCategory == 'Admin'" (click)="deleteUser(i)">Delete</button>
+                                      <button class="btn-danger" *ngIf="u.accountCategory != 'Admin'">Delete</button>
+                                      <button class="btn-danger" [hidden]="u.accountCategory == 'Admin'">Delete</button>
+                                      <button class="btn-danger" [style.display]="u.accountCategory == 'Admin' ? 'none' : 'block'">Delete</button>
+                                  </td>
+                              
+                              </tr>
+                          </div>
+                              </tbody>
+                              </table>
+      two-way sans ngModel : <input [value]="props2" (keyup)="changeValue(p.value)" #p>{{props2}} ** {{p}}
+      two-way avec ngModel : <input [(ngModel)]="props2">{{props2}}                
+  </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              
+  

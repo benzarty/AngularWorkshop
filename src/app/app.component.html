@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProjetProduit</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="container">
+  <!---------<app-root></app-root>--------->
+  <div class="container" id="body">
+    <!---start navbar--->
+   <app-header></app-header>
+    <!---end navbar--->
+    <!---start slide--->
+    <router-outlet></router-outlet>
+    <!---end slide--->
+    <!---start usersList section--->
+    
+    <!---end usersList section--->
+  </div>
+  <app-Test></app-Test> 
+ 
+  <!-----Footer Section------>
+  <app-footer></app-footer>
+  <!-----End Footer Section------>
+</div>
+</body>
+</html>
