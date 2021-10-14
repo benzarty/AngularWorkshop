@@ -1,3 +1,4 @@
+import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
 import { ListUserComponent } from './list-user-component/list-user-component.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -18,6 +19,8 @@ const routes: Routes = [
   },
   { path: 'mainproduct', component: MainProductComponent },
   { path: 'mainprovider', component: MainProviderComponent },
+    { path: 'form/:id', component: AddFormComponentComponent },
+
 
   { path: '**', component: NotFoundPageComponent },
 ];

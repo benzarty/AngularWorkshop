@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { HomeComponent } from './home/home.component';
+import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
 
 //un composant fait partie d'une module
 @NgModule({     //bech te9oul héthi module  (declariw fih les module eli fih)
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
       HeaderComponent,
       FooterComponent,
       NotFoundPageComponent,
-      HomeComponent, //leezm kol component lese9 fi module
+      HomeComponent,
+      AddFormComponentComponent, //leezm kol component lese9 fi module
       
    ],
   imports: [
