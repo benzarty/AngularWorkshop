@@ -35,7 +35,7 @@ import { AddFormComponentComponent } from './add-form-component/add-form-compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, //bech te5dem bi ngmodul
+    FormsModule, //bech te5dem bi ngmodul w forms
     NgbModule
   ],
   providers: [],  //service

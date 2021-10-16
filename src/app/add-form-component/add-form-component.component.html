@@ -1,1 +1,44 @@
-<p>add-form-component works!</p>
+<form ngForm #f="ngForm">
+  First Name :<input type="text" value="55" required minlength="3" [(ngModel)]="user.idCustomer" #first="ngModel" name="firstname"/> 
+  //lezem teged attribut name
+  {{ first.valid }} {{ first.touched }}
+
+  <!-- ngmodel bech te3es   -->
+  <!-- pour acceder aux méthodes de ngmodel t7oteha fi westeha sinon #first bech pointi juste 3la input -->
+  <!-- maykound valid ken required et min lenghth -->
+  <div *ngIf="first.invalid && first.touched">Champ obligatoire</div>
+
+  Last Name :<input type="text" value="55" required minlength="3" ngModel pattern="[a-zA-Z]*" #last="ngModel" name="lastname" />
+  {{ last.valid }} {{ last.touched }}
+  <div *ngIf="last.invalid && last.touched">2 conditions </div>
+  <!-- lezem condition bech invalid appliki  -->
+
+  <div *ngIf="first.errors?.required && first.errors?.minlength">
+    Champ obligatoire
+    
+</div>
+
+  <div *ngIf="last.errors?.required">Champ obligatoire</div>
+  <!-- ki yebda 3andek barcha validate fil input te7eb ta3ref menin bethapet -->
+  <div *ngIf="last.errors?.minlength">Champ obligatoire</div>
+
+   <div *ngIf="last.errors?.minlength">
+      {{last.errors?.minlength.actualLength}} Minimum {{last.errors?.minlength.requiredLength}} caractères
+  </div>
+
+  <div *ngIf="last.errors?.pattern">
+    Seulement des lettres
+</div>
+
+ <br>
+  BirthDay <input name="BirthDay" type="text" ngModel required #birth="ngModel"> {{birth.valid}}
+  <br>
+  <button [disabled]="f.invalid" (click)="getall()"> Valider </button>
+</form>
+
+
+
+
+ 
+
+ 

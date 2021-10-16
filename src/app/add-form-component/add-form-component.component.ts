@@ -1,3 +1,4 @@
+import { User } from './../models/user';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFormComponentComponent implements OnInit {
 
+user : User=new User();
   constructor(private ac :ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -21,6 +23,10 @@ export class AddFormComponentComponent implements OnInit {
     
   }
 
+  getall()
+  {
+    console.log(this.user);
+  }
 
 
 
