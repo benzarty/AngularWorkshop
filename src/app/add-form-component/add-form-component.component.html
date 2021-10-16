@@ -1,6 +1,7 @@
 <form ngForm #f="ngForm">
+  <!-- ngform surveille toute la fomulaire eli 3andeha ngmodul -->
   First Name :<input type="text" value="55" required minlength="3" [(ngModel)]="user.idCustomer" #first="ngModel" name="firstname"/> 
-  //lezem teged attribut name
+  <!-- lezem teged attribut name -->
   {{ first.valid }} {{ first.touched }}
 
   <!-- ngmodel bech te3es   -->
@@ -12,6 +13,7 @@
   {{ last.valid }} {{ last.touched }}
   <div *ngIf="last.invalid && last.touched">2 conditions </div>
   <!-- lezem condition bech invalid appliki  -->
+
 
   <div *ngIf="first.errors?.required && first.errors?.minlength">
     Champ obligatoire
@@ -27,6 +29,7 @@
   </div>
 
   <div *ngIf="last.errors?.pattern">
+    <!-- yechoufou el contrainte eli attaché lil input héthika verifiweha houni -->
     Seulement des lettres
 </div>
 
