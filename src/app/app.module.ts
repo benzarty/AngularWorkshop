@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TestComponent } from './Test/Test.component';
 import { ListUserComponent } from './list-user-component/list-user-component.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainUserComponent } from './main-user/main-user.component';
 import { MainProductComponent } from './main-product/main-product.component';
 import { MainProviderComponent } from './main-provider/main-provider.component';
@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { HomeComponent } from './home/home.component';
 import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
+import { LoginUserComponent } from './login-user/login-user.component';
 
 //un composant fait partie d'une module
 @NgModule({     //bech te9oul héthi module  (declariw fih les module eli fih)
@@ -29,12 +30,14 @@ import { AddFormComponentComponent } from './add-form-component/add-form-compone
       FooterComponent,
       NotFoundPageComponent,
       HomeComponent,
-      AddFormComponentComponent, //leezm kol component lese9 fi module
+      AddFormComponentComponent,
+      LoginUserComponent, //leezm kol component lese9 fi module
       
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule, //bech te5dem bi ngmodul w forms
     NgbModule
   ],

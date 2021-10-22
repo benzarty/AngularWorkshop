@@ -1,3 +1,4 @@
+import { LoginUserComponent } from './login-user/login-user.component';
 import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
 import { ListUserComponent } from './list-user-component/list-user-component.component';
 import { HomeComponent } from './home/home.component';
@@ -18,8 +19,10 @@ const routes: Routes = [
     // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
   },
   { path: 'mainproduct', component: MainProductComponent },
+  { path: 'reactive', component: LoginUserComponent },
+
   { path: 'mainprovider', component: MainProviderComponent },
-    { path: 'form/:id', component: AddFormComponentComponent },
+  { path: 'form/:id', component: AddFormComponentComponent },
 
 
   { path: '**', component: NotFoundPageComponent },
@@ -32,4 +35,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

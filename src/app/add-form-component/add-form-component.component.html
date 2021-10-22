@@ -1,26 +1,32 @@
 <form ngForm #f="ngForm">
   <!-- ngform surveille toute la fomulaire eli 3andeha ngmodul -->
-  First Name :<input type="text" value="55" required minlength="3" [(ngModel)]="user.idCustomer" #first="ngModel" name="firstname"/> 
+  First Name :<input type="text"  required minlength="3" [(ngModel)]="user.idCustomer" #first="ngModel" name="firstname"/> 
   <!-- lezem teged attribut name -->
-  {{ first.valid }} {{ first.touched }}
+  <!-- {{ first.valid }} {{ first.touched }} -->
 
   <!-- ngmodel bech te3es   -->
   <!-- pour acceder aux méthodes de ngmodel t7oteha fi westeha sinon #first bech pointi juste 3la input -->
   <!-- maykound valid ken required et min lenghth -->
-  <div *ngIf="first.invalid && first.touched">Champ obligatoire</div>
+  <div *ngIf="first.invalid && first.touched">Champ obligatoire 2 conditionnnnnn </div>
 
-  Last Name :<input type="text" value="55" required minlength="3" ngModel pattern="[a-zA-Z]*" #last="ngModel" name="lastname" />
-  {{ last.valid }} {{ last.touched }}
-  <div *ngIf="last.invalid && last.touched">2 conditions </div>
+
+
+
+
+  Last Name :<input type="text"  required minlength="3" ngModel pattern="[a-zA-Z]*" #last="ngModel" name="lastname" />
+  <!-- {{ last.valid }} {{ last.touched }} -->
+  <div *ngIf="last.invalid && last.touched">2 conditionssss </div>
   <!-- lezem condition bech invalid appliki  -->
 
 
-  <div *ngIf="first.errors?.required && first.errors?.minlength">
-    Champ obligatoire
+
+  <div *ngIf="first.errors?.minlength">
+    min lenghth
     
 </div>
 
-  <div *ngIf="last.errors?.required">Champ obligatoire</div>
+
+  <div *ngIf="last.errors?.required && last.touched">Champ obligatoire 1 seul condition haha</div>
   <!-- ki yebda 3andek barcha validate fil input te7eb ta3ref menin bethapet -->
   <div *ngIf="last.errors?.minlength">Champ obligatoire</div>
 
