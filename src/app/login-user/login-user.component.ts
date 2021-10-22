@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginUserComponent implements OnInit {
   myForm : FormGroup;
-
+  mescnx:any=[];
   constructor() { }  
   // mathabik houni ken service 
 
@@ -30,6 +30,13 @@ export class LoginUserComponent implements OnInit {
 {
   //return this.myForm.get('email');
   return this.myForm.controls.email;
+}
+add()
+{
+  this.mescnx.push(this.myForm.value);
+  console.log(this.mescnx);
+
+  
 }
 
 }
