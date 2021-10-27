@@ -1,5 +1,5 @@
 <form  [formGroup]="myForm" (submit)="add()" > 
-    <!-- directuve maya3refehech donc import module  -->
+    <!-- directuve maya3refehech donc import module reactiveform  -->
     <div>
         <label>email</label>
         <input type="text" class="form-control"  formControlName="email">
@@ -19,7 +19,13 @@
             <div class="alert alert-danger" *ngIf="myForm.get('pwd').invalid" role="alert">
                 This is a danger alert—check it out!
                </div>
-            <input type="submit"  class="btn btn-primary"  value="Login">
+            <input type="submit"  class="btn btn-primary" [disabled]="myForm.invalid" value="Login">
             
 </form>
 <!-- formgroupname , form inbriqué -->
+
+<!--
+html lo5era asychrone tetsama lezem tebe3eth bech lil ts bech temchi 2 waay biding moch kif héthi kol 
+chay fil ts donc 1 way binding (vvariable wel formulaire kol chouni) ->perfermamnce ki tekber formulaire 
+-ki tebda formulaire fiha barcha traitement condition mathbik reactive + securité
+-->

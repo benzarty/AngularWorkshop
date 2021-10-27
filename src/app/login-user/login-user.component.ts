@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-user.component.css']
 })
 export class LoginUserComponent implements OnInit {
-  myForm : FormGroup;
+  myForm : FormGroup; 
   mescnx:any=[];
   constructor() { }  
   // mathabik houni ken service 
@@ -15,21 +15,17 @@ export class LoginUserComponent implements OnInit {
   ngOnInit(): void {
     // initialisation houni famech declaratio
     this.myForm=new FormGroup({
-      email:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?")]),
+      email:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?"),Validators.required]),  //validatiotor synchrone,3:validator asynchrone
       pwd:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?")]),
 
     })
-
-
-
-
 
 
   }
   get myemails()
 {
   //return this.myForm.get('email');
-  return this.myForm.controls.email;
+  return this.myForm.controls.email ;
 }
 add()
 {
