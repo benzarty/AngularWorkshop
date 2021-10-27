@@ -15,8 +15,9 @@ export class LoginUserComponent implements OnInit {
   ngOnInit(): void {
     // initialisation houni famech declaratio
     this.myForm=new FormGroup({
-      email:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?"),Validators.required]),  //validatiotor synchrone,3:validator asynchrone
+      email:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?"),Validators.required,Validators.minLength(3)]),  //validatiotor synchrone,3:validator asynchrone
       pwd:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?")]),
+      adress:new FormGroup({street:new FormControl(),city : new FormControl()})
 
     })
 
@@ -33,6 +34,10 @@ add()
   console.log(this.mescnx);
 
   
+}
+reset()
+{
+  this.myForm.reset();
 }
 
 }

@@ -1,26 +1,44 @@
-<form  [formGroup]="myForm" (submit)="add()" > 
+<form [formGroup]="myForm" (submit)="add()">
     <!-- directuve maya3refehech donc import module reactiveform  -->
     <div>
         <label>email</label>
-        <input type="text" class="form-control"  formControlName="email">
+        <input type="text" class="form-control" formControlName="email" />
         <!-- formControlName tejbed info min [formGroup] -->
         <!-- [] lezem mawjouda fil ts -->
-        </div>
+    </div>
 
-        <div class="alert alert-danger" *ngIf="myemails.invalid" role="alert">
-            email ya bhim
-           </div>
+    <div class="alert alert-danger" *ngIf="myemails.invalid && myemails.touched" role="alert">
+        email ya bhim
+    </div>
+    
 
-        <div class="form-group">
-            <label>pwd</label>
-            <input type="text" class="form-control" formControlName="pwd">
-            </div>
-<!-- pattern lezem tekteb bech testi -->
-            <div class="alert alert-danger" *ngIf="myForm.get('pwd').invalid" role="alert">
-                This is a danger alert—check it out!
-               </div>
-            <input type="submit"  class="btn btn-primary" [disabled]="myForm.invalid" value="Login">
-            
+    <div class="form-group">
+        <label>pwd</label>
+        <input type="text" class="form-control" formControlName="pwd" />
+    </div>
+    <!-- pattern lezem tekteb bech testi -->
+    <div class="alert alert-danger" *ngIf="myForm.get('pwd').invalid" role="alert">
+        This is a danger alert—check it out!
+    </div>
+
+<div formGroupName="adress">
+
+<h3>Adresse </h3>
+   <label>street</label>
+        <input type="text" class="form-control" formControlName="street" />
+        
+
+        <label>city</label>
+        <input type="text" class="form-control" formControlName="city" />
+        
+    </div>
+
+
+
+
+
+    <input type="submit" class="btn btn-primary" [disabled]="myForm.invalid" value="Login" />
+    <input type="submit" class="btn btn-warning" (click)="reset()" value="Cancel" />
 </form>
 <!-- formgroupname , form inbriqué -->
 
