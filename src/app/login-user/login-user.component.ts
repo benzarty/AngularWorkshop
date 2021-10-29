@@ -17,7 +17,9 @@ export class LoginUserComponent implements OnInit {
     this.myForm=new FormGroup({
       email:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?"),Validators.required,Validators.minLength(3)]),  //validatiotor synchrone,3:validator asynchrone
       pwd:new FormControl("",[Validators.pattern("^[a-zA-Z0-9]{8,}?")]),
-      adress:new FormGroup({street:new FormControl(),city : new FormControl()})
+      adress:new FormGroup({street:new FormControl(),city : new FormControl()
+
+      })
 
     })
 

@@ -16,6 +16,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { HomeComponent } from './home/home.component';
 import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
 import { LoginUserComponent } from './login-user/login-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { FilsComponent } from './fils/fils.component';
 
 //un composant fait partie d'une module
 @NgModule({     //bech te9oul héthi module  (declariw fih les module eli fih)
@@ -31,7 +33,9 @@ import { LoginUserComponent } from './login-user/login-user.component';
       NotFoundPageComponent,
       HomeComponent,
       AddFormComponentComponent,
-      LoginUserComponent, //leezm kol component lese9 fi module
+      LoginUserComponent,
+      ParentComponent,
+      FilsComponent, //leezm kol component lese9 fi module
       
    ],
   imports: [
