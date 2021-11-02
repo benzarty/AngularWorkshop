@@ -1,0 +1,99 @@
+<!--
+<table>
+   directive 
+  <tr *ngFor="let u of list" [style.backgroundColor]="u.accountCategory == 'Admin' ? 'red' : 'green' ">
+    <!-- list hiya nom proprioté mawjouda fil ts
+    <td>
+      {{ u.firstName }}
+    </td>
+    <td>
+      {{ u.lastName }}
+    </td>
+    <td>
+      {{ u.birthDate }}
+    </td>
+    <td>
+      {{ u.accountCategory }}
+    </td>
+    <td>
+      {{ u.email }}
+    </td>
+    <td>
+      {{ u.password }}
+    </td>
+   
+    <td>
+      {{ u.profession }}
+    </td>
+    <td>
+        <img [src]="u.picture" >
+      </td>
+      <!-- teraja3 true or false  
+    <td><button [disabled]="u.accountCategory == 'Admin' ">Delete</button></td>
+    <td><button [disabled]="getUserCategory(u.accountCategory)">Delete</button></td>  <!-- mezeù retour boolean-
+    <td><button *ngIf="u.accountCategory == 'Admin' ">Delete</button></td>
+    <td><button [hidden]="u.accountCategory == 'Admin' ">Delete</button></td>
+
+
+
+  </tr>
+</table>   -->
+ <!-- bech te5dem biha lezem importi modul   ngModel -->
+  <!-- tenajamch zouz ng fard balise  -->
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-box clearfix">
+                <div class="table-responsive">
+                    <table class="table user-list">
+                        <thead>
+                            <tr>
+                                <th><span>idInvoice</span></th>
+                                <th><span>discountAmount</span></th>
+                                <th class="text-center"><span>billAmount</span></th>
+                                <th><span>dateBill</span></th>
+                                <th><span>Status</span></th>
+                                <th><span>Action</span></th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div *ngFor="let u of invoices; let i = index; let f=first">
+                              
+                               
+                                <td>
+                                    <div>{{u.idInvoice}}</div>
+                                </td>
+                                <td>
+                                    {{ u.discountAmount }}
+                                </td>
+                                <td class="text-center">
+                                    <span class="label label-default">{{u.billAmount}}</span>
+                                </td>
+                                <td>
+                                    <div href="#">{{ u.dateBill }}</div>
+                                </td>
+                                <td>
+                                    <div href="#">{{ u.Status }}</div>
+                                </td>
+                                <td>
+                                    <button [routerLink]="['/listinvoice/updateinvoice']">Update </button>                           
+
+<button (click)="deleteUser(i)">Supprimer </button>                           
+     </td>
+                              
+                            
+                            
+                        </div>
+                            </tbody>
+                            </table>
+            
+</div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-fils',
@@ -8,7 +8,8 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angu
 export class FilsComponent implements OnInit,OnChanges {
 @Input() prop1:string;
 //emitter min core
-@Output() notified=new EventEmitter()
+@Output() notified=new EventEmitter<number>()
+// number bech te9oul type retour
   constructor() { console.log("je suis le constructuer")}
 
   ngOnInit(): void {
@@ -17,11 +18,12 @@ export class FilsComponent implements OnInit,OnChanges {
 
   ngOnChanges()
   {
+    
     console.log("je suis le changes")
 
   }
   sendNotif()
   {
-    this.notified.emit();
+    this.notified.emit(5);
   }
 }

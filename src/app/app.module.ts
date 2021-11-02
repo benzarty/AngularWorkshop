@@ -18,6 +18,9 @@ import { AddFormComponentComponent } from './add-form-component/add-form-compone
 import { LoginUserComponent } from './login-user/login-user.component';
 import { ParentComponent } from './parent/parent.component';
 import { FilsComponent } from './fils/fils.component';
+import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
+import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
+import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
 
 //un composant fait partie d'une module
 @NgModule({     //bech te9oul héthi module  (declariw fih les module eli fih)
@@ -35,7 +38,10 @@ import { FilsComponent } from './fils/fils.component';
       AddFormComponentComponent,
       LoginUserComponent,
       ParentComponent,
-      FilsComponent, //leezm kol component lese9 fi module
+      FilsComponent,
+      AddInvoiceComponent,
+      EditInvoiceComponent,
+      ListInvoiceComponent, //leezm kol component lese9 fi module
       
    ],
   imports: [

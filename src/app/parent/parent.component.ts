@@ -13,7 +13,7 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void { 
     // mara barka tet3ayet 
   }
-f()
+f(n:number)
 {
   console.log("hahah")
 }

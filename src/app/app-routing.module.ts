@@ -1,3 +1,4 @@
+import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
 import { ListUserComponent } from './list-user-component/list-user-component.component';
@@ -8,6 +9,7 @@ import { MainProductComponent } from './main-product/main-product.component';
 import { MainUserComponent } from './main-user/main-user.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,8 +24,14 @@ const routes: Routes = [
   { path: 'reactive', component: LoginUserComponent },
 
   { path: 'mainprovider', component: MainProviderComponent },
-  { path: 'form/:id', component: AddFormComponentComponent },
+  { path: 'listinvoice', component: ListInvoiceComponent, 
+  children: [{ path: 'updateinvoice', component: EditInvoiceComponent }],
+  // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
+},
 
+
+  { path: 'form/:id', component: AddFormComponentComponent },
+  
 
   { path: '**', component: NotFoundPageComponent },
 ];
