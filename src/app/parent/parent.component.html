@@ -1,16 +1,12 @@
 
 
 <input type="text" [(ngModel)]="myVal">
-  <app-fils (notified)= "f($event)" [prop1]= "myVal"></app-fils>   
 
-
-
- 
 
  <!-- notified : esm fil fils mawjoud -->
 <!-- L’objet $event contient les informations  envoyées par le fils -->
 
- <app-fils *ngFor="let p of invoices;let i=index" [invoice]="p"></app-fils>
+ <app-fils *ngFor="let p of invoices;let i=index" [prop1]= "myVal" [invoice]="p" (liked) ="addlikes($event)"></app-fils>
 <!-- p meta3 let p  -->
 
 <!-- string "'myVal'" -->

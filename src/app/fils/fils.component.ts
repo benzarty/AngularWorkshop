@@ -13,8 +13,9 @@ aaa:number =56
 
 @Input() initialValue : string
 //emitter min core
-@Output() notified=new EventEmitter<number>()
-@Output() prefixed = new EventEmitter<string>();
+//@Output() liked = new EventEmitter();
+@Output() liked = new EventEmitter<Invoice>();
+
 
 // number bech te9oul type retour
   constructor() { console.log("je suis le constructuer")}
@@ -29,10 +30,11 @@ aaa:number =56
     console.log("je suis le changes")
 
   }
-  sendNotif()
+  
+  SendNotif2()
   {
-   
-    this.notified.emit(this.aaa); //lezemou type number 
+//this.liked.emit();
+this.liked.emit(this.invoice);
   }
   
   

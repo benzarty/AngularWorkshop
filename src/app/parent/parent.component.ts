@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   myVal:String ="bonjour"
+  aaa : number
   
   invoices: Invoice[];
 
@@ -16,17 +17,21 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void { 
     // mara barka tet3ayet 
     this.invoices =[
-      { idInvoice: 1, discountAmount: 20, billAmount: 500, dateBill:
+      { idInvoice: 1, discountAmount: 20, billAmount: 500,like: 500, dateBill:
       "14/07/2021" , Status : true},
-      { idInvoice: 2, discountAmount: 10, billAmount: 1000, dateBill:
+      { idInvoice: 2, discountAmount: 10, billAmount: 1000,like: 500,dateBill:
       "02/10/2020" , Status : false},
-      { idInvoice: 3, discountAmount: 50, billAmount: 200, dateBill:
+      { idInvoice: 3, discountAmount: 50, billAmount: 200,like: 500,dateBill:
       "15/12/2021" , Status : false},
       ]
   }
 f(n:number)
 {
   console.log(this.myVal)
+}
+addlikes(p:Invoice)
+{
+  p.like+=1;
 }
 
 }
