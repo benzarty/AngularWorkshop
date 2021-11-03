@@ -1,10 +1,17 @@
 
 
 <input type="text" [(ngModel)]="myVal">
- <app-fils (notified)= "f($event)" [prop1]= "myVal"></app-fils>  
+  <app-fils (notified)= "f($event)" [prop1]= "myVal"></app-fils>   
 
- <!-- <app-div *ngFor="let p of products;let i=index" [product]="p"></app-div> -->
- <!-- ba3ed product.id fil fils .... -->
+
+
+ 
+
+ <!-- notified : esm fil fils mawjoud -->
+<!-- L’objet $event contient les informations  envoyées par le fils -->
+
+ <app-fils *ngFor="let p of invoices;let i=index" [invoice]="p"></app-fils>
+<!-- p meta3 let p  -->
 
 <!-- string "'myVal'" -->
 <!-- "myVal" tetsama prorité  -->

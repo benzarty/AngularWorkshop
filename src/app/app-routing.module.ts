@@ -1,3 +1,4 @@
+import { ParentComponent } from './parent/parent.component';
 import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { AddFormComponentComponent } from './add-form-component/add-form-component.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   },
   { path: 'mainproduct', component: MainProductComponent },
   { path: 'reactive', component: LoginUserComponent },
+  { path: 'parentchild', component: ParentComponent },
 
   { path: 'mainprovider', component: MainProviderComponent },
   { path: 'listinvoice', component: ListInvoiceComponent, 
