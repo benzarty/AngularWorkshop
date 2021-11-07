@@ -1,26 +1,32 @@
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" (ngSubmit)="edit()">  
+    <!-- ng-submit -->
     <div class="form-group">
-      <label for="exampleInputEmail1">idInvoice</label>
-      <input type="text" class="form-control" formControlName="idInvoice" aria-describedby="emailHelp" >
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label>idInvoice</label>
+        <input type="text" 
+        class="form-control" formControlName="id">
+    </div> 
+    <div class="form-group">
+        <label>discountAmount</label>
+        <input type="text" 
+        class="form-control" formControlName="discount">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">discountAmount</label>
-      <input type="text" class="form-control" formControlName="discountAmount">
+        <label>billAmount</label>
+        <input type="text" 
+        class="form-control" formControlName="bill">
+    </div> 
+    <div class="form-group">
+        <label>dateBill</label>
+        <input type="text" 
+        class="form-control" formControlName="date">
     </div>
+    <div class="form-group">
+        <label>Status</label>
+        <input type="text" 
+        class="form-control" formControlName="status">
+    </div>
+    <!-- ng-submit : mete3ebe3a angular ki tebda 3andek contrainte fil ts(reactive form) moch kima submit lo5era -->
+      
+    <input type="submit" class="btn btn-primary" value="Login">       
+</form>
 
-    <div class="form-group">
-        <label for="exampleInputPassword1">billAmount</label>
-        <input type="text" class="form-control" formControlName="billAmount">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">dateBill</label>
-        <input type="text" class="form-control" formControlName="dateBill">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">status</label>
-        <input type="text" class="form-control" formControlName="Status">
-      </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
