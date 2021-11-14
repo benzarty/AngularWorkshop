@@ -26,14 +26,15 @@ const routes: Routes = [
   { path: 'parentchild', component: ParentComponent },
 
   { path: 'mainprovider', component: MainProviderComponent },
-  { path: 'listinvoice', component: ListInvoiceComponent, 
-  children: [{ path: 'updateinvoice', component: EditInvoiceComponent }],
-  // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
-},
+  {
+    path: 'listinvoice', component: ListInvoiceComponent,
+    children: [{ path: 'updateinvoice', component: EditInvoiceComponent }],
+    // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
+  },
 
 
   { path: 'form/:id', component: AddFormComponentComponent },
-  
+
 
   { path: '**', component: NotFoundPageComponent },
 ];

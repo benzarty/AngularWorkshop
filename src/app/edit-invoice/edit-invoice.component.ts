@@ -29,7 +29,7 @@ export class EditInvoiceComponent implements OnInit {
     this.myForm=new FormGroup({
       id:new FormControl({"value":this.invoiceToEdit.idInvoice,"disabled":true}),
       discount: new FormControl(this.invoiceToEdit.discountAmount,Validators.required),
-      bill: new FormControl(this.invoiceToEdit.billAmount,Validators.maxLength(3)),
+      bill: new FormControl(this.invoiceToEdit.billAmount,Validators.required),
       date: new FormControl(this.invoiceToEdit.dateBill,Validators.maxLength(3)),
       status: new FormControl(this.invoiceToEdit.Status,Validators.maxLength(3)),
     }) 
@@ -54,3 +54,4 @@ export class EditInvoiceComponent implements OnInit {
    this.edited.emit(myi);
   }
 }
+

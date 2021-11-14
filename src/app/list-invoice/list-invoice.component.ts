@@ -13,7 +13,7 @@ export class ListInvoiceComponent implements OnInit {
   nb=5;
   constructor() { }
   show=false;
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.invoices =[
       { idInvoice: 1, discountAmount: 20, billAmount: 500, dateBill: "14/07/2021" , Status : true,like:50},
       { idInvoice: 2, discountAmount: 10, billAmount: 1000, dateBill: "02/10/2020" , Status : false,like:50},

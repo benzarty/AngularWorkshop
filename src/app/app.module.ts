@@ -21,6 +21,9 @@ import { FilsComponent } from './fils/fils.component';
 import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
 import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 //un composant fait partie d'une module
 @NgModule({     //bech te9oul héthi module  (declariw fih les module eli fih)
@@ -46,6 +49,7 @@ import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
    ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule, //bech te5dem bi ngmodul w forms
