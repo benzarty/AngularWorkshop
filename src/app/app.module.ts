@@ -22,6 +22,7 @@ import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
 import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListTodoComponent } from './list-todo/list-todo.component';
 
 
 
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
       FilsComponent,
       AddInvoiceComponent,
       EditInvoiceComponent,
-      ListInvoiceComponent, //leezm kol component lese9 fi module
+      ListInvoiceComponent,
+      ListTodoComponent, //leezm kol component lese9 fi module
       
    ],
   imports: [

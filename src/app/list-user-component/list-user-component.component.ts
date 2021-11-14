@@ -1,4 +1,4 @@
-import { UserService } from './../user.service';
+import { UserService } from '../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../models/user';
@@ -7,14 +7,14 @@ import { User } from '../models/user';
   selector: 'app-list-user',
   templateUrl: './list-user-component.component.html',
   styleUrls: ['./list-user-component.component.css'],
-  // ki teged provider houni tetgad ken houni composant ki te3ayteleha fi composant e5er ya9rahech
+  // ki teged provider houni tetgad ken houni composant héthé w se8arou... ki te3ayteleha fi composant e5er ya9rahech
 })
 export class ListUserComponent implements OnInit {
   props2 = 'test';
   search = '';
   list: User[];
   listInitial: User[];
-  constructor(private ac: ActivatedRoute,private us:UserService) {} //service nes kol tegedou donc tegedou mara barka
+  constructor(private ac: ActivatedRoute,private us:UserService) {}  //tenajem teged new min fou9 ama ta5ser resurce // tetsama injection instance (moch ta5le9)
 
   ngOnInit(): void {
     //parammak ye3es 3la changement wa9teli yeji haw chnowa ya3mel
