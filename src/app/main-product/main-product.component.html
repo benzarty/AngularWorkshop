@@ -1,1 +1,36 @@
-<p>main-product works!</p>
+
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">code</th>
+                <th scope="col">libelle</th>
+                <th scope="col">prixUnitaire</th>
+                <th scope="col">tauxTVA</th>
+                <th scope="col">Action</th>
+
+
+
+              </tr>
+            </thead>
+            <tbody>
+                <div *ngFor="let u of list; let i = index; let f=first">
+              <tr>
+                <th scope="row">1</th>
+                <td> {{ u.id }}</td>
+                
+                <td>{{ u.code }}</td>
+                <td>{{ u.libelle }}</td>
+                <td>{{ u.prixUnitaire }}</td>
+                <td>{{ u.tauxTVA }}</td>
+                <td><button (click)="deleteProduct(u)"> Delete</button></td>
+
+
+              </tr>
+             
+              </div>
+            </tbody>
+          </table>
+
+          

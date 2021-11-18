@@ -32,7 +32,6 @@ export class ListUserComponent implements OnInit {
     }); */
 
 
-    //this.list=this.us.getAllUsers();
 this.us.getAllUsersFromDb().subscribe(res=>{
   this.list=res;
   this.listInitial=this.list;
@@ -40,19 +39,11 @@ this.us.getAllUsersFromDb().subscribe(res=>{
     res=>{
       console.log(res.get('cat')),
       this.list=this.listInitial.filter((user) =>{
-        return user.accountCategory === res.get('cat');//return user.accountCategory === res.get('category')  ;
+        return user.accountCategory === res.get('cat');
      })
   }
 )
 });
-
-
-
-
-
-
-
-
 
     //initialisi table ba3ed filtri  //test
     //ken 5aliw liste 9dima elle l ecrase liste filtrage //filtre javascpript

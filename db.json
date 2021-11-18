@@ -21,7 +21,7 @@
   "profile": {
     "name": "typicode"
   },
-  "users":[
+  "users": [
     {
       "idCustomer": 1,
       "firstName": "Mila",
@@ -47,7 +47,7 @@
     {
       "idCustomer": 3,
       "firstName": "George",
-      "lastName":  "Clooney",
+      "lastName": "Clooney",
       "birthDate": "1999-06-30",
       "accountCategory": "Customer",
       "email": "marlon@brando.com",
@@ -58,8 +58,8 @@
     {
       "idCustomer": 4,
       "firstName": "Ryan",
-      "lastName":  "Gossling",
-      "birthDate":"1999-06-30",
+      "lastName": "Gossling",
+      "birthDate": "1999-06-30",
       "accountCategory": "Golden",
       "email": "Ryan@nicholson.com",
       "password": "test",
@@ -69,7 +69,7 @@
     {
       "idCustomer": 5,
       "firstName": "Robert",
-      "lastName":  "Downey",
+      "lastName": "Downey",
       "birthDate": "1999-06-30",
       "accountCategory": "Blocked Account",
       "email": "robert@nicholson.com",
@@ -77,7 +77,14 @@
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
       "profession": "Software Engineer"
     }
-
-
+  ],
+  "products": [
+    {
+      "id": 8,
+      "code": "json-server2",
+      "libelle": "typicode2",
+      "prixUnitaire": "json-server2",
+      "tauxTVA": "typicode2"
+    }
   ]
 }
