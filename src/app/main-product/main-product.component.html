@@ -25,6 +25,8 @@
                 <td>{{ u.prixUnitaire }}</td>
                 <td>{{ u.tauxTVA }}</td>
                 <td><button (click)="deleteProduct(u)"> Delete</button></td>
+                <td><button (click)="update()"> Modifier</button></td>
+
 
 
               </tr>
@@ -33,4 +35,42 @@
             </tbody>
           </table>
 
-          
+      
+          <div class="container">
+            <form [formGroup]="formGeneral" (ngSubmit)="save()">
+    
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text" class="form-control" formControlName="id">
+                </div>
+               
+                <div class="form-group">
+                    <label>Code</label>
+                    <input type="text" class="form-control" formControlName="code">
+                </div>
+                
+                <div class="form-group">
+                    <label>libelle</label>
+                    <input type="text" class="form-control" formControlName="libelle">
+                </div>
+                
+                <div class="form-group">
+                    <label>Prix unitaire</label>
+                    <input type="text" class="form-control" formControlName="PrixUnitaire">
+                </div>
+                <div class="form-group">
+                    <label>tauxTVA</label>
+                    <input type="text" class="form-control" formControlName="tauxTVA">
+                </div>
+                
+               
+            
+            
+        
+                
+            
+                
+                <input  type="submit" class="btn btn-primary" value="Add Product" >
+                    
+            </form>
+            </div>

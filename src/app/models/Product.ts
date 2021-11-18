@@ -1,5 +1,5 @@
 export class Product {
-    id : number;
+    id?: number;
     code:string;
     libelle:string;
     prixUnitaire:number;

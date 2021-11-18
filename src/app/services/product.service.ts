@@ -32,4 +32,13 @@ export class ProductService {
         })
         }
         
+
+        getProductById(id: number): Observable<Product> {
+          return this.myhttp.get<Product>(this.productsUrl +'/'+ id); }
+
+
+          updateProduct (id: number, product: Product): Observable<Product> {
+            return this.myhttp.put<Product>(this.productsUrl+'/'+ id, product, this.httpOptions);
+            }
+
 }

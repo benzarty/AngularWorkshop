@@ -85,6 +85,13 @@
       "libelle": "typicode2",
       "prixUnitaire": "json-server2",
       "tauxTVA": "typicode2"
+    },
+    {
+      "id": "dad",
+      "code": "da",
+      "libelle": "dza",
+      "PrixUnitaire": "da",
+      "tauxTVA": "sa"
     }
   ]
 }
