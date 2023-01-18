@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TestComponent } from './Test/Test.component';
 import { ListUserComponent } from './list-user-component/list-user-component.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainUserComponent } from './main-user/main-user.component';
 import { MainProductComponent } from './main-product/main-product.component';
 import { MainProviderComponent } from './main-provider/main-provider.component';
@@ -23,6 +22,7 @@ import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
 import { ListInvoiceComponent } from './list-invoice/list-invoice.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListTodoComponent } from './list-todo/list-todo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -54,8 +54,8 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule, //bech te5dem bi ngmodul w forms
-    NgbModule
+    FormsModule, //lil forms
+    NgModule
   ],
   providers: [],  //service  //Providers is used to register the classes to an angular module as a service
   bootstrap: [AppComponent] //bech yebda mina 
