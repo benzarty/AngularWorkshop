@@ -1,4 +1,4 @@
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { ProductService } from './../services/product.service';
 import { Product } from './../models/Product';
 import { Component, OnInit, SimpleChange, SimpleChanges, OnChanges, OnDestroy } from '@angular/core';
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./main-product.component.css']
 })
 export class MainProductComponent implements OnInit, OnChanges,OnDestroy {
-  formGeneral: FormGroup;
+  formGeneral: UntypedFormGroup;
 
   errors:string;
   ob:Subscription
@@ -30,12 +30,12 @@ export class MainProductComponent implements OnInit, OnChanges,OnDestroy {
     //on changes no 5ater famech variable d entre sortie 
 
 
-    this.formGeneral = new FormGroup({
-      id: new FormControl("", [Validators.required]),
-      code: new FormControl("", [Validators.required]),
-      libelle: new FormControl("", [Validators.required]),
-      PrixUnitaire: new FormControl("", [Validators.required]),
-      tauxTVA: new FormControl("", [Validators.required]),
+    this.formGeneral = new UntypedFormGroup({
+      id: new UntypedFormControl("", [Validators.required]),
+      code: new UntypedFormControl("", [Validators.required]),
+      libelle: new UntypedFormControl("", [Validators.required]),
+      PrixUnitaire: new UntypedFormControl("", [Validators.required]),
+      tauxTVA: new UntypedFormControl("", [Validators.required]),
 
 
 

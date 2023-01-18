@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Invoice } from '../models/invoice';
 
 @Component({
@@ -9,18 +9,18 @@ import { Invoice } from '../models/invoice';
 })
 export class AddInvoiceComponent implements OnInit {
 
-  myForm :FormGroup;
+  myForm :UntypedFormGroup;
   @Output() aded = new EventEmitter<Invoice>();
   constructor() { }
 
   ngOnInit(): void {
-    this.myForm=new FormGroup({
+    this.myForm=new UntypedFormGroup({
       
-      idInvoice:new FormControl(),
-      discountAmount: new FormControl(),
-      billAmount: new FormControl(),
-      dateBill: new FormControl(),
-      Status: new FormControl(),
+      idInvoice:new UntypedFormControl(),
+      discountAmount: new UntypedFormControl(),
+      billAmount: new UntypedFormControl(),
+      dateBill: new UntypedFormControl(),
+      Status: new UntypedFormControl(),
     }) 
   }
 add(){
