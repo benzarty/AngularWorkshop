@@ -1,41 +1,35 @@
-<form [formGroup]="myForm" (submit)="add()">
+<form [formGroup]="myForm" (ngSubmit)="add()">
     <!-- directuve maya3refehech donc import module reactiveform  -->
     <div>
         <label>email</label>
-        <input type="text" class="form-control" formControlName="email" />
+        <input type="text" class="form-control" formControlName="email" class="form-control" />
         <!-- formControlName tejbed info min [formGroup] -->
         <!-- [] lezem mawjouda fil ts -->
     </div>
 
-    <div class="alert alert-danger" *ngIf="myemails.invalid && myemails.touched" role="alert">
-        email ya bhim
+    <div class="alert alert-danger" *ngIf="myForm.get('email').invalid && myemails.touched && myForm.get('email').hasError('email') "  role="alert">
+        email ya bhimmm2
     </div>
-    
 
     <div class="form-group">
         <label>pwd</label>
         <input type="text" class="form-control" formControlName="pwd" />
     </div>
-    <!-- pattern lezem tekteb bech testi -->
-    <div class="alert alert-danger" *ngIf="myForm.get('pwd').invalid" role="alert">
+    <!-- <div class="alert alert-danger" *ngIf="myForm.get('pwd').invalid"  role="alert">
         This is a danger alert—check it out!
-    </div>
+    </div> -->
 
-<div formGroupName="adress">
+    <div class="alert alert-danger" *ngIf="myForm.get('pwd').hasError('minlength')" role="alert">
+touched  or pass  </div>
 
-<h3>Adresse </h3>
-   <label>street</label>
+    <div formGroupName="adress">
+        <h3>Adresse</h3>
+        <label>street</label>
         <input type="text" class="form-control" formControlName="street" />
-        
 
         <label>city</label>
         <input type="text" class="form-control" formControlName="city" />
-        
     </div>
-
-
-
-
 
     <input type="submit" class="btn btn-primary" [disabled]="myForm.invalid" value="Login" />
     <input type="submit" class="btn btn-warning" (click)="reset()" value="Cancel" />
@@ -47,5 +41,3 @@ html lo5era asychrone tetsama lezem tebe3eth bech lil ts bech temchi 2 waay bidi
 chay fil ts donc 1 way binding (vvariable wel formulaire kol chouni) ->perfermamnce ki tekber formulaire 
 -ki tebda formulaire fiha barcha traitement condition mathbik reactive + securité
 -->
-
-

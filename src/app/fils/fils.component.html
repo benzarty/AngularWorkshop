@@ -1,6 +1,7 @@
 <p>{{prop1}}</p>
 
 
+
 {{ invoice.idInvoice }}
 {{ invoice.discountAmount }}
 {{ invoice.dateBill }}
@@ -8,3 +9,6 @@
 
 <button (click)=SendNotif2()>Likes </button> 
 <!-- parent howa yezid .fils ken intermediaire -->
+
+<ng-content select="h2"></ng-content>  
+<ng-content select="ng-container"></ng-content>  

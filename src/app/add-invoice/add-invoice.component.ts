@@ -15,6 +15,7 @@ export class AddInvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm=new FormGroup({
+      
       idInvoice:new FormControl(),
       discountAmount: new FormControl(),
       billAmount: new FormControl(),

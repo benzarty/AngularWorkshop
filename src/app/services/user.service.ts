@@ -4,8 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable( //provider
- { providedIn : 'root'}   //ki yetsna3 composant racine yetsna3 instance héthi me3aha donc na7na ba3ed just bech injectiw
-// ki t7ot providedin root composant kol yesta3melouha w ken tesami fiha wa7da donc ken héthika w children mete3ou
+ { providedIn : 'root'}  
 
 )
 export class UserService {

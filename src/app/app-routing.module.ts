@@ -25,18 +25,17 @@ const routes: Routes = [
   { path: 'mainproduct', component: MainProductComponent },
   { path: 'reactive', component: LoginUserComponent },
   { path: 'parentchild', component: ParentComponent },
-  { path: 'methodepartage', component: ListTodoComponent  },
+  { path: 'methodepartage', component: ListTodoComponent },
 
   { path: 'mainprovider', component: MainProviderComponent },
   {
-    path: 'listinvoice', component: ListInvoiceComponent,
+    path: 'listinvoice',
+    component: ListInvoiceComponent,
     children: [{ path: 'updateinvoice', component: EditInvoiceComponent }],
     // [{ path: 'listuser/:cat/:test', component: ListUserComponent }],
   },
 
-
   { path: 'form/:id', component: AddFormComponentComponent },
-
 
   { path: '**', component: NotFoundPageComponent },
 ];
@@ -48,4 +47,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

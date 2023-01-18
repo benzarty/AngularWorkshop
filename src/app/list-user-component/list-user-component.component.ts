@@ -14,6 +14,7 @@ export class ListUserComponent implements OnInit {
   search = '';
   list: User[];
   listInitial: User[];
+  passedparam:string; 
   constructor(private ac: ActivatedRoute,private us:UserService) {}  //tenajem teged new min fou9 ama ta5ser resurce // tetsama injection instance (moch ta5le9)
 
   ngOnInit(): void {
@@ -21,15 +22,16 @@ export class ListUserComponent implements OnInit {
     //inscrit lil service héthika
     // teraja3lek observable
    
+this.passedparam=this.ac.snapshot.paramMap.get('cat');
 
 
-   /* this.listInitial = this.list;
-    this.ac.paramMap.subscribe((res) => {
-      console.log(res.get('cat'));
-      this.list = this.listInitial.filter((User) => {
-        return User.accountCategory === res.get('cat');
-      });
-    }); */
+    // this.listInitial = this.list;
+    // this.ac.paramMap.subscribe((res) => {
+    //   console.log(res.get('cat'));
+    //   this.list = this.listInitial.filter((User) => {
+    //     return User.accountCategory === res.get('cat');
+    //   });
+    // }); 
 
 
 this.us.getAllUsersFromDb().subscribe(res=>{
@@ -44,6 +46,8 @@ this.us.getAllUsersFromDb().subscribe(res=>{
   }
 )
 });
+
+
 
     //initialisi table ba3ed filtri  //test
     //ken 5aliw liste 9dima elle l ecrase liste filtrage //filtre javascpript

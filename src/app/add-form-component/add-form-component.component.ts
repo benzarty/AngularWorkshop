@@ -1,6 +1,7 @@
 import { User } from './../models/user';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-form-component',
@@ -18,16 +19,19 @@ user : User=new User();
     //observable :gerer les données asynchrone : on ne sait pas les données quant il arrivent 
     this.ac.paramMap.subscribe(res=>
       {
+
         console.log(res.get('id'));
       }),errors=>{console.log(errors)}
     
   }
 
-  getall()
+  getall(f:NgForm)
   {
-    console.log(this.user);
+    console.log(f.value.firstname);
   }
 
+        // <a class="nav-link"  [routerLink]="['/form',1]">Add Form</a>
+        // <a class="nav-link"  [routerLink]="['/form','zeze']">Add Form</a>
 
 
   }

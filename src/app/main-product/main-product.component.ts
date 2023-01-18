@@ -1,16 +1,20 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductService } from './../services/product.service';
 import { Product } from './../models/Product';
-import { Component, OnInit, SimpleChange, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, SimpleChange, SimpleChanges, OnChanges, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-main-product',
   templateUrl: './main-product.component.html',
   styleUrls: ['./main-product.component.css']
 })
-export class MainProductComponent implements OnInit, OnChanges {
+export class MainProductComponent implements OnInit, OnChanges,OnDestroy {
   formGeneral: FormGroup;
+
+  errors:string;
+  ob:Subscription
 
   list: Product[];
   Product: Product;
@@ -50,14 +54,23 @@ export class MainProductComponent implements OnInit, OnChanges {
   getAllProducts() {
     this.us.getProducts().subscribe(res => {
       this.list = res;
-    });
+    }, error => {
+      this.errors = error
+      console.log(error);
+  });
   }
+
+  // getAllProducts2() {
+  //   this.us.getProducts().subscribe(res => {
+  //     this.list = res;
+  //   });
+  // }
 
 
 
 
   deleteProduct(p: Product) {
-    this.us.deleteProduct(p).subscribe(res => {
+    this.ob=this.us.deleteProduct(p).subscribe(res => {
       this.getAllProducts()
     });
 
@@ -65,8 +78,6 @@ export class MainProductComponent implements OnInit, OnChanges {
 
 
   save() {
-
-
 
 
 
@@ -80,6 +91,13 @@ export class MainProductComponent implements OnInit, OnChanges {
 
   update(){
     this.us.updateProduct(this.Product.id,this.Product).subscribe();}
+
+    ngOnDestroy(){
+
+this.ob.unsubscribe();
+//Unsubscribe Observable To Resolve Memory Leak:
+
+    }
 
 
 }

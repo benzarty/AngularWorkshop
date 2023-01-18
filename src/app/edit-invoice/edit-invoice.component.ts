@@ -17,9 +17,10 @@ export class EditInvoiceComponent implements OnInit {
   // ngoninit mara barka ahawka 3leh tetbadalch
   ngOnInit(): void {
     console.log("ngOnInit");
+    //ngoninit tetgad barcha marat tenajem moch kima ngonchange
     
   }
-  // ngonChanges te5dem ken ki 7aja tetbadel min parent wala te3adiha ama wa9teha mara barka ken tebadalhech 5aterha teraci ken les changements 
+  // ngonChanges te5dem ken ki 7aja tetbadel min parent(lezem input bech te5dem) wala te3adiha ama wa9teha mara barka ken tebadalhech 5aterha teraci ken les changements 
   //ng onchanged 9ebal oninit
   // SimpleChanges bech te5arej info minha 
   ngOnChanges(changes:SimpleChanges){

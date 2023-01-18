@@ -1,6 +1,6 @@
-<form ngForm #f="ngForm">
+<form  #f="ngForm" (ngSubmit)="getall(f)">
   <!-- ngform surveille toute la fomulaire eli 3andeha ngmodul -->
-  First Name :<input type="text"  required minlength="3" [(ngModel)]="user.idCustomer" #first="ngModel" name="firstname"/> 
+  First Name :<input type="text"  required minlength="3" ngModel #first="ngModel" name="firstname"/> 
   <!-- lezem teged attribut name -->
   <!-- {{ first.valid }} {{ first.touched }} -->
 
@@ -10,7 +10,7 @@
   <div *ngIf="first.invalid && first.touched">Champ obligatoire 2 conditionnnnnn </div>
 
 
-
+  
 
 
   Last Name :<input type="text"  required minlength="3" ngModel pattern="[a-zA-Z]*" #last="ngModel" name="lastname" />
@@ -42,7 +42,10 @@
  <br>
   BirthDay <input name="BirthDay" type="text" ngModel required #birth="ngModel"> {{birth.valid}}
   <br>
-  <button [disabled]="f.invalid" (click)="getall()"> Valider </button>
+  <button [disabled]="f.invalid" type="submit"> Valider </button>
+
+
+  
 </form>
 
 

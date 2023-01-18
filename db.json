@@ -80,18 +80,25 @@
   ],
   "products": [
     {
-      "id": 8,
-      "code": "json-server2",
-      "libelle": "typicode2",
-      "prixUnitaire": "json-server2",
-      "tauxTVA": "typicode2"
+      "id": "9",
+      "code": "",
+      "libelle": "azaz",
+      "PrixUnitaire": "12",
+      "tauxTVA": "12"
     },
     {
-      "id": "dad",
-      "code": "da",
-      "libelle": "dza",
-      "PrixUnitaire": "da",
-      "tauxTVA": "sa"
+      "id": "99",
+      "code": "",
+      "libelle": "88",
+      "PrixUnitaire": "88",
+      "tauxTVA": "88"
+    },
+    {
+      "id": "12",
+      "code": "12",
+      "libelle": "12",
+      "PrixUnitaire": "12",
+      "tauxTVA": "12"
     }
   ]
 }

@@ -1,76 +1,57 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">code</th>
+      <th scope="col">libelle</th>
+      <th scope="col">prixUnitaire</th>
+      <th scope="col">tauxTVA</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div *ngFor="let u of list; let i = index; let f = first">
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ u.id }}</td>
 
+        <td>{{ u.code }}</td>
+        <td>{{ u.libelle }}</td>
+        <td>{{ u.prixUnitaire }}</td>
+        <td>{{ u.tauxTVA }}</td>
+        <td><button (click)="deleteProduct(u)">Delete</button></td>
+        <td><button (click)="update()">Modifier</button></td>
+      </tr>
+    </div>
+  </tbody>
+</table>
 
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">code</th>
-                <th scope="col">libelle</th>
-                <th scope="col">prixUnitaire</th>
-                <th scope="col">tauxTVA</th>
-                <th scope="col">Action</th>
+<div class="container">
+  <form [formGroup]="formGeneral" (submit)="save()">
+    <div class="form-group">
+      <label>id</label>
+      <input type="text" class="form-control" formControlName="id" />
+    </div>
 
+    <div class="form-group">
+      <label>Code</label>
+      <input type="text" class="form-control" formControlName="code" />
+    </div>
 
+    <div class="form-group">
+      <label>libelle</label>
+      <input type="text" class="form-control" formControlName="libelle" />
+    </div>
 
-              </tr>
-            </thead>
-            <tbody>
-                <div *ngFor="let u of list; let i = index; let f=first">
-              <tr>
-                <th scope="row">1</th>
-                <td> {{ u.id }}</td>
-                
-                <td>{{ u.code }}</td>
-                <td>{{ u.libelle }}</td>
-                <td>{{ u.prixUnitaire }}</td>
-                <td>{{ u.tauxTVA }}</td>
-                <td><button (click)="deleteProduct(u)"> Delete</button></td>
-                <td><button (click)="update()"> Modifier</button></td>
+    <div class="form-group">
+      <label>Prix unitaire</label>
+      <input type="text" class="form-control" formControlName="PrixUnitaire" />
+    </div>
+    <div class="form-group">
+      <label>tauxTVA</label>
+      <input type="text" class="form-control" formControlName="tauxTVA" />
+    </div>
 
-
-
-              </tr>
-             
-              </div>
-            </tbody>
-          </table>
-
-      
-          <div class="container">
-            <form [formGroup]="formGeneral" (ngSubmit)="save()">
-    
-                <div class="form-group">
-                    <label>id</label>
-                    <input type="text" class="form-control" formControlName="id">
-                </div>
-               
-                <div class="form-group">
-                    <label>Code</label>
-                    <input type="text" class="form-control" formControlName="code">
-                </div>
-                
-                <div class="form-group">
-                    <label>libelle</label>
-                    <input type="text" class="form-control" formControlName="libelle">
-                </div>
-                
-                <div class="form-group">
-                    <label>Prix unitaire</label>
-                    <input type="text" class="form-control" formControlName="PrixUnitaire">
-                </div>
-                <div class="form-group">
-                    <label>tauxTVA</label>
-                    <input type="text" class="form-control" formControlName="tauxTVA">
-                </div>
-                
-               
-            
-            
-        
-                
-            
-                
-                <input  type="submit" class="btn btn-primary" value="Add Product" >
-                    
-            </form>
-            </div>
+    <input type="submit" class="btn btn-primary" value="Add Product" />
+  </form>
+</div>

@@ -57,7 +57,7 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
     FormsModule, //bech te5dem bi ngmodul w forms
     NgbModule
   ],
-  providers: [],  //service
+  providers: [],  //service  //Providers is used to register the classes to an angular module as a service
   bootstrap: [AppComponent] //bech yebda mina 
   //le composant racine qu'Angular crée et insère dans laindex.htmlpage Web hôte.
 })

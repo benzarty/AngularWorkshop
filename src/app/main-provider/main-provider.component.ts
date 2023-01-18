@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-main-provider',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainProviderComponent implements OnInit {
 
+  @ViewChild('testviewchiledddd') child!: "testviewchiledddd";
   constructor() { }
+  
 
   ngOnInit(): void {
   }
